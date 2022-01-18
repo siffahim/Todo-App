@@ -1,0 +1,76 @@
+$padding1:11px 5px;
+$padding2:12px 15px;
+$textCenter:center;
+$bg-color:gray;
+$whiteColor:#fff;
+$borderZero:none;
+$bold:bold;
+
+*{
+  margin: 0;
+  padding: 0;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.app{
+  text-align: $textCenter;
+}
+.title{
+  color:$whiteColor;
+  margin-bottom: 15px;
+}
+.form-container{
+  background-color: rgb(120, 163, 35);
+  padding-top:20px;
+  padding-bottom:30px;
+}
+.form-container input{
+  padding: $padding1;
+  width: 220px;
+  font-size: 15px;
+  background-color: rgba(255,255,255,0.5);
+  border: $borderZero;
+  border-right: 1px solid black;
+}
+@mixin btn(){
+  padding:$padding2;
+  background-color: $bg-color;
+  color:$whiteColor;
+  border: $borderZero;
+  font-weight: $bold;
+  border-radius:0  2px 2px 0;
+}
+.btn{
+  @include btn;
+}
+.del-btn{
+  border: $borderZero;
+  background: transparent;
+  font-size: 20px;
+  color:rgb(70, 66, 66);
+}
+.table-cap{
+  margin:20px 0;
+  font-weight: $bold;
+}
+.app table{
+    width: 700px;
+    margin:0px auto;
+    border-collapse: collapse;
+}
+.app table,td,th{
+  padding: 8px;
+  font-size: $bold;
+}
+.app th{
+  background-color: gray;
+  color: $whiteColor;
+  font-size: 20px;
+}
+.app tr:nth-child(even){
+  background-color:gray;
+  color: $whiteColor;
+}
+.app tr:nth-child(odd){
+  background-color:gainsboro;
+}
